@@ -7,7 +7,8 @@ function clone (o) { return JSON.parse(JSON.stringify(o)); }
 let defaultEnv = {
     env:  process.env.NODE_ENV || 'local',
     app: {
-        port: (process.env.PORT || 8000)
+        port: (process.env.PORT || 8000),
+        domain: 'http://localhost:' + (process.env.PORT || 8000)
     }
 };
 
