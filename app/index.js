@@ -20,6 +20,8 @@ app.set('view cache', false);
 
 const controllers = require('./controllers');
 
+app.get('/v1/plans', controllers.v1.plans.index);
+
 app.get('/', controllers.home.show);
 
 module.exports = function () {
