@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
+    "build": "./node_modules/.bin/gulp",
+    "build:live": "./node_modules/.bin/gulp live",
     "e2e": "NODE_ENV=test ./node_modules/.bin/protractor protractor.conf.js",
     "specs": "./node_modules/.bin/jasmine",
     "vspecs": "./node_modules/.bin/karma start --single-run",
-    "test": "npm run specs && npm run e2e",
+    "test": "npm run vspecs && npm run specs && npm run e2e",
     "update-webdriver": "./node_modules/.bin/webdriver-manager update --versions.chrome 2.35"
   },
   "repository": {
@@ -33,6 +35,10 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
+    "del": "^3.0.0",
+    "event-stream": "^4.0.1",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "jasmine": "^3.3.1",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "^4.0.0",
