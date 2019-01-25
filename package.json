@@ -1,0 +1,35 @@
+{
+  "name": "jspairing",
+  "version": "1.0.0",
+  "description": "JS practice for interviews",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "build": "./node_modules/.bin/gulp",
+    "e2e": "npm run build ; NODE_ENV=test ./node_modules/.bin/protractor protractor.conf.js",
+    "specs": "./node_modules/.bin/jasmine",
+    "test": "npm run build && npm run specs && npm run e2e",
+    "update-webdriver": "./node_modules/.bin/webdriver-manager update --versions.chrome 2.35"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egamboa/jspairing.git"
+  },
+  "keywords": [
+    "pairing",
+    "vanillajs"
+  ],
+  "author": "Andres Gamboa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egamboa/jspairing/issues"
+  },
+  "homepage": "https://github.com/egamboa/jspairing#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  }
+}
