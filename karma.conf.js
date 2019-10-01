@@ -6,7 +6,9 @@ module.exports = function (config) {
       'app/assets/js/*.js',
       'vspec/*.spec.js'
     ],
-    exclude: [],
+    exclude: [
+      'app/assets/js/main.js'
+    ],
     preprocessors: {
       'app/assets/js/*.js': 'coverage'
     },

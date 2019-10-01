@@ -1,7 +1,6 @@
-describe('test lib', function () {
-
-  it('test hello', function () {
-    expect(hello()).toBe('hello');
+describe('Plans', function () {
+  it('should have an empty list', function () {
+    var plans = new Plans();
+    expect(plans.list).toEqual([]);
   });
-
 });
